@@ -12,6 +12,7 @@
 		FDB3A6DC201C5B09006F71EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DA201C5B09006F71EB /* Main.storyboard */; };
 		FDB3A6DE201C5B09006F71EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DD201C5B09006F71EB /* Assets.xcassets */; };
 		FDB3A6E1201C5B09006F71EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DF201C5B09006F71EB /* LaunchScreen.storyboard */; };
+		FDE5FEA5201F14CC00512B60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FEA4201F14CC00512B60 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FDB3A6DD201C5B09006F71EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB3A6E0201C5B09006F71EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDB3A6E2201C5B09006F71EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE5FEA4201F14CC00512B60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE5FEA5201F14CC00512B60 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				FDB3A6D5201C5B09006F71EB /* MyCamera */,
 				FDB3A6D4201C5B09006F71EB /* Products */,
+				FDE5FEA3201F14CC00512B60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				FDB3A6E2201C5B09006F71EB /* Info.plist */,
 			);
 			path = MyCamera;
+			sourceTree = "<group>";
+		};
+		FDE5FEA3201F14CC00512B60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDE5FEA4201F14CC00512B60 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

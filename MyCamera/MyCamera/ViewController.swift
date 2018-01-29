@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UINavigationControllerDelegate , UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()

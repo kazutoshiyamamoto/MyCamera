@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>カメラにアクセスします。</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>画像を保存</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>フォトライブラリーにアクセスします。</string>
 	<key>UILaunchStoryboardName</key>
@@ -29,9 +31,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<array/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
