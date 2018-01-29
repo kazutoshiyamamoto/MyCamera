@@ -24,27 +24,54 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
     
     // カメラを起動するボタンをタップすると実行
     @IBAction func cameraButtonAction(_ sender: Any) {
-        // カメラが利用可能かチェック
+        // カメラかフォトライブラリーどちらから画像を取得するか選択
+        let alertController = UIAlertController(title: "確認", message: "選択してください", preferredStyle: .actionSheet)
+        
+        //カメラが起動可能かチェック
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            print("カメラは利用できます")
-            // （１）UIImagePickerControllerのインスタンスを生成
-            let ipc = UIImagePickerController()
-            // （２）sourceTypeにCameraを設定
+            
+          // カメラを起動するための選択肢を定義
+          let cameraAction = UIAlertAction(title: "カメラ", style: .default, handler: { (action:UIAlertAction) in
+            //カメラを起動
+            let ipc : UIImagePickerController = UIImagePickerController()
             ipc.sourceType = .camera
-            // （３）deligate設置
             ipc.delegate = self
-            // （４）モーダルビューで表示
-            present(ipc, animated: true, completion: nil)
-        }else{
-            print("カメラが利用できません")
+            self.present(ipc, animated: true, completion: nil)
+            })
+            alertController.addAction(cameraAction)
         }
+        
+        //フォトライブラリーが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+        
+          // フォトライブラリーを起動するための選択肢を定義
+          let photoLibraryAction = UIAlertAction(title: "フォトライブラリー", style: .default, handler:  { (action:UIAlertAction) in
+            
+          //フォトライブラリーを起動
+          let ipc : UIImagePickerController = UIImagePickerController()
+          ipc.sourceType = .photoLibrary
+          ipc.delegate = self
+          self.present(ipc, animated: true, completion: nil)
+          })
+          alertController.addAction(photoLibraryAction)
+        }
+        
+        // キャンセルの選択肢を定義
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // iPadで落ちてしまう対策
+        alertController.popoverPresentationController?.sourceView = view
+        
+        // 選択肢を画面に表示
+        present(alertController, animated: true, completion: nil)
     }
     
     //SNSに投稿するボタンをタップすると実行
     @IBAction func SNSButtonAction(_ sender: Any) {
         
     // （１）撮影が終わった時に呼ばれるdeligateメソッド
-        func UIImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+         func UIImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
           // （２）撮影した写真を、配置したpictureImageに渡す
           pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
           // （３）モーダルニューを閉じる
@@ -56,20 +83,15 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
           let shareItems = [shareImage]
                 
           //UIActivityViewControllerにシェア画像を渡す
-          let Controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+          let controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
             
           // iPadで落ちてしまう対策
-          Controller.popoverPresentationController?.sourceView = view
+          controller.popoverPresentationController?.sourceView = view
             
           //UIActivityViewControllerを表示
-          present(Controller, animated: true, completion: nil)
+          present(controller, animated: true, completion: nil)
             
             }
-            
-        }
+            }
     }
-    
-    
-    
 }
-

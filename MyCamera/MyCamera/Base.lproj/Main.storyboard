@@ -51,15 +51,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iVg-kR-PKH" firstAttribute="top" secondItem="OfG-ad-VLV" secondAttribute="bottom" constant="30" id="0lc-Ki-xPk"/>
-                            <constraint firstItem="OfG-ad-VLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Bzp-Dh-Qgh"/>
                             <constraint firstItem="OfG-ad-VLV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LSV-jj-RMG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfG-ad-VLV" secondAttribute="trailing" constant="50" id="Vvz-R1-iHK"/>
                             <constraint firstItem="g58-FZ-rL5" firstAttribute="top" secondItem="iVg-kR-PKH" secondAttribute="bottom" constant="30" id="YBa-7S-usI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfG-ad-VLV" secondAttribute="trailing" constant="50" id="bdW-ET-llq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g58-FZ-rL5" secondAttribute="trailing" constant="50" id="cPj-37-KDd"/>
                             <constraint firstItem="OfG-ad-VLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kL6-Un-F6V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVg-kR-PKH" secondAttribute="trailing" constant="50" id="ph6-hS-RJV"/>
-                            <constraint firstItem="OfG-ad-VLV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="sY4-dq-dRV"/>
                             <constraint firstItem="iVg-kR-PKH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="v7n-j6-0Z4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g58-FZ-rL5" secondAttribute="bottom" constant="30" id="vNH-HP-8Gk"/>
                             <constraint firstItem="g58-FZ-rL5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="vs0-zS-lV7"/>
@@ -67,7 +64,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cameraButtonAction" destination="iVg-kR-PKH" id="llH-7M-ugt"/>
                         <outlet property="pictureImage" destination="OfG-ad-VLV" id="03U-RY-tGA"/>
                     </connections>
                 </viewController>
