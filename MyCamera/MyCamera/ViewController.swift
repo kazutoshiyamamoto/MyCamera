@@ -71,7 +71,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func SNSButtonAction(_ sender: Any) {
         
     // （１）撮影が終わった時に呼ばれるdeligateメソッド
-         func UIImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
           // （２）撮影した写真を、配置したpictureImageに渡す
           pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
           // （３）モーダルニューを閉じる
