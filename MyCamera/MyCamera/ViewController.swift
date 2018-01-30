@@ -70,13 +70,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     //SNSに投稿するボタンをタップすると実行
     @IBAction func SNSButtonAction(_ sender: Any) {
         
-    // （１）撮影が終わった時に呼ばれるdeligateメソッド
-         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-          // （２）撮影した写真を、配置したpictureImageに渡す
-          pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-          // （３）モーダルニューを閉じる
-          dismiss(animated: true, completion: nil)
-            
     // 表示画像をアンラップしてシェア画像として取り出し
         if let shareImage = pictureImage.image {
           // UIActivityViewControllerに渡す配列を作成
@@ -91,7 +84,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
           //UIActivityViewControllerを表示
           present(controller, animated: true, completion: nil)
             
-            }
-            }
+   }
+   }
+    // （１）撮影が終わった時に呼ばれるdeligateメソッド
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // （２）撮影した写真を、配置したpictureImageに渡す
+        pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        // （３）モーダルニューを閉じる
+        dismiss(animated: true, completion: nil)
     }
 }
