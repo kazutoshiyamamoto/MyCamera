@@ -12,6 +12,7 @@
 		FDB3A6DC201C5B09006F71EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DA201C5B09006F71EB /* Main.storyboard */; };
 		FDB3A6DE201C5B09006F71EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DD201C5B09006F71EB /* Assets.xcassets */; };
 		FDB3A6E1201C5B09006F71EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB3A6DF201C5B09006F71EB /* LaunchScreen.storyboard */; };
+		FDD570C420219170002F1B98 /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD570C320219170002F1B98 /* EffectViewController.swift */; };
 		FDE5FEA5201F14CC00512B60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FEA4201F14CC00512B60 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		FDB3A6DD201C5B09006F71EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB3A6E0201C5B09006F71EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDB3A6E2201C5B09006F71EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDD570C320219170002F1B98 /* EffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
 		FDE5FEA4201F14CC00512B60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				FDB3A6D6201C5B09006F71EB /* AppDelegate.swift */,
 				FDB3A6D8201C5B09006F71EB /* ViewController.swift */,
 				FDB3A6DA201C5B09006F71EB /* Main.storyboard */,
+				FDD570C320219170002F1B98 /* EffectViewController.swift */,
 				FDB3A6DD201C5B09006F71EB /* Assets.xcassets */,
 				FDB3A6DF201C5B09006F71EB /* LaunchScreen.storyboard */,
 				FDB3A6E2201C5B09006F71EB /* Info.plist */,
@@ -150,6 +153,7 @@
 			files = (
 				FDB3A6D9201C5B09006F71EB /* ViewController.swift in Sources */,
 				FDB3A6D7201C5B09006F71EB /* AppDelegate.swift in Sources */,
+				FDD570C420219170002F1B98 /* EffectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

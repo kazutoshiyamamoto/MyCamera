@@ -89,8 +89,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // （１）撮影が終わった時に呼ばれるdeligateメソッド
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // （２）撮影した写真を、配置したpictureImageに渡す
-        pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        // （３）モーダルニューを閉じる
-        dismiss(animated: true, completion: nil)
+        captureImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        // （３）モーダルビューを閉じる
+        dismiss(animated: true, completion: {
+        // （４）エフェクト画面に遷移
+        self.performSegue(withIdentifier: "showEffectView", sender: nil)
+    })
+    }
+    
+    // 次の画面遷移する時に渡す画像を格納する場所
+    var captureImage : UIImage?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        //次の画面のインスタンスを取得
+        let nextViewController = segue.destination as! EffectViewController
+        
+        // 次の画面のインスタンスに取得した画像を渡す
+        nextViewController.originalImage = captureImage
     }
 }
